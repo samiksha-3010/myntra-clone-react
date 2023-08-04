@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Component/Navbar';
-import Home from './Home';
+import Home from './Component/Home';
+import Footer from './Component/Footer';
+
 
 function App() {
   return (
@@ -10,8 +12,11 @@ function App() {
      <Navbar/>
       <Routes>
       <Route exact path='/'element={<Home/>}/>
+    
+
 
       </Routes>
+      <Footer/>
     </div>
   );
 }

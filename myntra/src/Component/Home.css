@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+.body>div:nth-child(2) {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.brands>div:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+}
+
+.bags>div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.beauty>div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.trending>div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.styles>div:nth-child(2) {  
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.colours>div:nth-child(2) {
+display: flex;
+justify-content:space-between;
+flex-wrap: wrap;
+
+}
+.season>div:nth-child(2) {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
