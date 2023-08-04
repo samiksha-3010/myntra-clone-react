@@ -1,8 +1,8 @@
-import { createContext, useEffect, useReducer,useState } from "react";
+import { createContext, useEffect, useReducer} from "react";
 
 export const AuthContext = createContext();
 
-const initalState = { user: null, product: [], studentList: {} };
+const initalState = { user: null ,product: [] };
 
 
 const reducer = (state, action) => {

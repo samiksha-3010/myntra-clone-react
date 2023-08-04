@@ -76,8 +76,8 @@ const Register = () => {
             const usersArray = JSON.parse(localStorage.getItem("Users")) || [];
             usersArray.push(userData);
             localStorage.setItem("Users", JSON.stringify(usersArray))
-            setUserData({ name: "", email: "", password: "", role: "Buyer" })
-            router('/login');
+            setUserData({ name: "", email: "", password: "", role: "Buyer",cart: [] })
+            // router('/login');
             toast.success("Registration Successfull.")
         } else {
             toast.error("Please fill the all fields.")
