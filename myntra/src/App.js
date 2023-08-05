@@ -9,6 +9,8 @@ import Register from './Component/Register';
 import AllProduct from './Component/AllProduct';
 import AddProduct from './Component/AddProduct';
 import Cart from './Component/Cart';
+import Profile from './Component/Profile';
+import SingleProduct from './Component/Context/SingleProduct';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
       <Route exact path='/cart'element={<Cart/>}/>
       <Route exact path='/addproduct'element={<AddProduct/>}/>
       <Route exact path='/allproduct'element={<AllProduct/>}/>
+      <Route exact path='/profile'element={<Profile/>}/>
+      <Route exact path='/singleproduct'element={<SingleProduct/>}/>
 
       
 
