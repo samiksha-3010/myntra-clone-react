@@ -3,7 +3,7 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import { router, useParams } from "react-router-dom";
-// import './MultipleProduct.css'
+
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./Context/AuthContext";
 import './SingleProduct.css'
