@@ -10,7 +10,8 @@ import AllProduct from './Component/AllProduct';
 import AddProduct from './Component/AddProduct';
 import Cart from './Component/Cart';
 import Profile from './Component/Profile';
-import SingleProduct from './Component/Context/SingleProduct';
+import SingleProduct from './Component/SingleProduct';
+
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
       <Route exact path='/addproduct'element={<AddProduct/>}/>
       <Route exact path='/allproduct'element={<AllProduct/>}/>
       <Route exact path='/profile'element={<Profile/>}/>
-      <Route exact path='/singleproduct'element={<SingleProduct/>}/>
+      <Route exact path='/singleproduct/:id'element={<SingleProduct/>}/>
 
       
 
@@ -33,7 +34,7 @@ function App() {
 
 
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,142 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+#Profile {
+
+    width: 100%;
+    border: 1px solid white;
+
+}
+
+#Profile>div {
+    width: 70%;
+    /* border: 3px solid grey; */
+    margin: auto;
+
+
+}
+
+
+#Profile>div:nth-child(1) {
+    /* font-size: 12px; */
+    margin-top: 150px;
+
+}
+
+#Profile>div>div:nth-child(1) {
+    border-bottom: 1px solid#d4d4d9;
+    padding-bottom: 13px;
+}
+
+#Profile>div>div:nth-child(1)>span {
+    font-size: small;
+
+}
+
+
+
+#profilepage {
+    display: flex;
+}
+
+#profilepage>div:nth-child(1) {
+    border: 1px solid yellow;
+    width: 20%;
+    /* height: 200px; */
+    border-right: 1px solid#d4d4d9;
+}
+
+#profilepage>div:nth-child(1)>div {
+    height: 100%;
+    width: 90%;
+    /* border: 1px solid black; */
+}
+
+#profilepage>div:nth-child(1)>div>div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 22px;
+   
+}
+
+#profilepage>div:nth-child(1)>div>div>h5 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-top: 1px solid #d4d4d9;
+    padding-top: 20px;
+    color: gray;
+}
+
+
+#profilepage>div:nth-child(2) {
+    border: 1px solid #d4d4d9;
+    width: 75%;
+    margin-top: 15px;
+    margin-left: 15px;
+    overflow-x: scroll;
+    border: 4px solid red;
+}
+
+
+#profilepage>div:nth-child(2)>div:nth-child(1) {
+    border: 1px solid yellow;
+    /* height: 200px; */
+    width: 65%;
+    margin: auto;
+}
+
+#profilepage>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
+    color: #282C3F;
+    font-weight: 600;
+    font-size: 18px;
+    /* padding-bottom: 20px; */
+    padding-bottom: 300px;
+    border-bottom: 1px solid#d4d4d9;
+    border: 5px solid red;
+}
+
+table {
+    margin-left: 25px;
+    color: #282C3F;
+
+}
+
+tbody>tr>td {
+    width: 200px;
+    margin: 10px; 
+     padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: smaller;
+    text-align: left;
+}
+
+#profilepage>div:nth-child(2)>div:nth-child(1)>div:nth-child(3) {
+    border: 1px solid red;
+    width: 100%;
+    height: 42px;
+
+}
+
+#button {
+    width: 95%;
+    height: 100%;
+    border-radius: 2PX;
+    border: none;
+    font-weight: bold;
+    color: #eaeaec;
+    background-color: #ff3f6c;
+    font-size: small;
+    margin-left: 10px;
+}
+body>div:nth-child(3){
+    /* border: 1px solid black; */
+    margin-top: 150px;
+   background-color: #f7f8f9;
+   }

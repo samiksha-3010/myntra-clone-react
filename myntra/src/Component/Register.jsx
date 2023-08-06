@@ -56,61 +56,74 @@
 // export default Register
 
 
+
+
+
+
+
 import React, { useState } from 'react'
-import { toast } from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
-    const [userData, setUserData] = useState({ name: "", email: "", password: "", role: "Buyer" });
-
-    const router = useNavigate();
-
-    console.log(userData, "userData")
-    const handleChange = (event) => {
+     const [userData,setUserData] = useState({name: "",email: "",password: "",role: "Buyer"})
+     const router = useNavigate();
+     const handleChange = (event) => {
         setUserData({ ...userData, [event.target.name]: event.target.value })
     }
+
+    // console.log(userData, "- userdata")
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if (userData.name && userData.email && userData.password) {
-            const usersArray = JSON.parse(localStorage.getItem("Users")) || [];
-            usersArray.push(userData);
-            localStorage.setItem("Users", JSON.stringify(usersArray))
-            setUserData({ name: "", email: "", password: "", role: "Buyer",cart: [] })
-            // router('/login');
-            toast.success("Registration Successfull.")
+
+            const array = JSON.parse(localStorage.getItem("Users")) || [];
+            const userDataObj = {
+                name: userData.name,
+                email: userData.email,
+                password: userData.password,
+                role:userData.role,
+                cart : []
+            };
+            // console.log(array, "-array")
+            array.push(userDataObj);
+            localStorage.setItem("Users", JSON.stringify(array)); /// set, not update
+
+            const ls = JSON.parse(localStorage.getItem("Test")) || [];
+            // console.log(ls, "-ls")
+            ls.push(userData);
+
+            alert("Registeration Successfull..")
+            router('/login')
         } else {
-            toast.error("Please fill the all fields.")
+            alert("Please fill the all fields..")
         }
     }
-
-    function selectRole(event) {
-        // console.log(event.target.value, "- role")
-        setUserData({ ...userData, ["role"]: event.target.value })
-    }
-
+     function selectRole (event){
+        // console.log(event.target.value = "-role")
+     setUserData({...userData,["role"]: event.target.value})
+     }
 
 
-    return (
-        <div>
-            <h1>Register</h1>
-            <form onSubmit={handleSubmit}>
-                <label>Name :</label><br />
-                <input value={userData.name} type='text' onChange={handleChange} name="name" /><br />
-                <label>Select Role :</label><br />
-                <select onChange={selectRole} >
-                    <option value="Buyer">Buyer</option>
-                    <option value="Seller">Seller</option>
-                </select><br />
-                <label>Email :</label><br />
-                <input value={userData.email} type='email' onChange={handleChange} name='email' /><br />
-                <label>Password :</label><br />
-                <input value={userData.password} type='password' onChange={handleChange} name='password' /><br />
+  return (
+    <div>
+         <h2>Register</h2>
+         <form onSubmit={handleSubmit}>
+                <label>Name</label><br />
+                <input type='text' name='name' onChange={handleChange} /><br />
+                <label>Slect Role:</label><br />
+                <select onChange ={selectRole}>
+                    <option value="Buyer">Byuer</option>
+                    <option value= "Seller">Seller</option>
+                </select><br/>
+                <label>Email</label><br />
+                <input type='email' name='email' onChange={handleChange} /><br />
+                <label>Password</label><br />
+                <input type='password' name='password' onChange={handleChange} /><br />
                 <input type='submit' value='Register' /><br />
             </form>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Register;
-

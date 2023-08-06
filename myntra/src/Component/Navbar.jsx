@@ -1,15 +1,18 @@
 import React from 'react'
 import './Navbar.css'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+    const router = useNavigate ();
   return (
     <div>
         <div className='screen'>
         <div className='navbar'>
             <div id="logo">
-                <img style= {{height: "60px",width: "100%"}}src="https://www.adgully.com/img/800/201704/myntra-logo.jpg"/>
+                <img  style= {{height: "60px",width: "100%"}}src="https://www.adgully.com/img/800/201704/myntra-logo.jpg"  onClick={() => router('/')}/>
             </div>
             <div className='product'>
+                <p onClick={() => router('/allproduct')}>AllProduct</p>
                 <p>Men,s</p>
                 <p>Women,s</p>
                 <p>Kid,s</p>
@@ -24,11 +27,13 @@ const Navbar = () => {
             </div>
             </div>
             <div className='logo2'>
-                <p>profile</p>
+                <p onClick={() => router('/profile')}>profile</p>
                 <i class="fa-solid fa-user"></i>
                 <p>wishlist</p>
                 <i class="fa-solid fa-heart"></i>
-                <p>Cart</p>
+                <p onClick={() => router('/cart')}>Cart</p>
+                <p onClick={() => router('/addproduct')}>Add product</p>
+                <p onClick={() => router('/login')}>Sign/up</p>
 
                 <i class="fa-solid fa-cart-shopping"></i>
 

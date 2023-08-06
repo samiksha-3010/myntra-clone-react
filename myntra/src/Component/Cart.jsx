@@ -25,15 +25,17 @@ const Cart = () => {
     //     const user = JSON.parse(localStorage.getItem("Currrent-user"))
     //     if (user?.role  == "seller"){
     //         alert("Access only to buyer")
-    //         // router("/")
-    //     }else{
+    //         router("/")
+    //     }
+        
+    //     else{
     //         alert("you are not a logged user")
     //         router('/login')
     //     }
     // },[])
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("Current-user"));
+        const user = JSON.parse(localStorage.getItem("Currrent-user"));
         if (user?.email) {
             const allUsers = JSON.parse(localStorage.getItem("Users"));
             for (var i = 0; i < allUsers.length; i++) {
@@ -49,7 +51,7 @@ const Cart = () => {
     }, [])
 
     function buyProducts() {
-        const user = JSON.parse(localStorage.getItem("Current-user"));
+        const user = JSON.parse(localStorage.getItem("Currrent-user"));
         if (user?.email) {
             const allUsers = JSON.parse(localStorage.getItem("Users"));
             for (var i = 0; i < allUsers.length; i++) {
@@ -72,8 +74,8 @@ const Cart = () => {
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', width: "65%", border: "2px solid black" }}>
                     {userCart && userCart.map((pro) => (
-                        <div style={{ width: "22%", height: "700px", border: "2px solid black", padding: "30px" }}>
-                            <img style={{ width: "100%", height: "500px" }} src={pro.image} />
+                        <div style={{ width: "20%", height: "500px", border: "2px solid black", padding: "30px" }}>
+                            <img style={{ width: "100%", height: "300px" }} src={pro.image} />
                             <h3>Title : {pro.title}</h3>
                             <h4>Price : {pro.price}$ </h4>
                         </div>
