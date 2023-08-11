@@ -9,8 +9,6 @@ const Cart = () => {
     const router = useNavigate()
 
     // console.log(userCart, "- userCart")
-
-
     useEffect(() => {
         if (userCart.length) {
             var totalPrice = 0;
