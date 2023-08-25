@@ -10,7 +10,7 @@ const Login = () => {
     const { state, dispatch } = useContext(AuthContext);
     const [userData, setUserData] = useState({ email: "", password: "" })
     const router = useNavigate();
-    console.log(state,"-state")
+    // console.log(state,"-state")
 
     const handleChange = (event) => {
         setUserData({ ...userData, [event.target.name]: event.target.value })
