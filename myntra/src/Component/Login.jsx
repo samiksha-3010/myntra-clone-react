@@ -43,7 +43,6 @@ const Login = () => {
             toast.error("All fields are mandtory.")
         }
     }
-
     // const handleSubmit = (event) => {
     //     event.preventDefault();
     //     if (userData.email && userData.password) {
