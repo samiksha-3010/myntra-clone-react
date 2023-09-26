@@ -7,6 +7,8 @@ const Home = () => {
     // <div>
 
 <div className='body'>
+
+    {/* <div style={{width:"100%",height:"350px"}} className='myntraimage'><img src='https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/8/25/359326db-26ba-43ea-b543-b6c55329c0cc1692972479058-Desktop-Banner--1-.jpg'/></div> */}
             <div>
                 <h4>BIGGEST DEALS ON TOP BRANDS</h4>
             </div>
