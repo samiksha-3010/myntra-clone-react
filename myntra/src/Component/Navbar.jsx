@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom'
+import AuthContext from './Context/AuthContext';
+
 
 const Navbar = () => {
     const router = useNavigate ();
+    const {state, dispatch} = useContext(AuthContext);
   return (
     <div>
         <div className='screen'>
@@ -34,6 +37,7 @@ const Navbar = () => {
                 <p onClick={() => router('/cart')}>Cart</p>
                 <p onClick={() => router('/addproduct')}>Add product</p>
                 <p onClick={() => router('/login')}>Sign/up</p>
+                <h4 onClick={() => dispatch({ type: "LOGOUT" })}>Logout</h4>
 
                 <i class="fa-solid fa-cart-shopping"></i>
 

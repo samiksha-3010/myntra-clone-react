@@ -8,7 +8,7 @@ const AllProduct = () => {
   const [products, setProducts] = useState()
   const router = useNavigate();
 
-  console.log(products,"-products")
+  // console.log(products,"-products")
   useEffect (()=>{
       const productsFormDb = JSON.parse(localStorage.getItem("Products"))
       if(productsFormDb){
