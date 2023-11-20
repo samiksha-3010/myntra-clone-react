@@ -29,7 +29,7 @@ const AddProduct = () => {
     }
    }    
        function selectRole(event){
-        console.log(event.target.value, "-role")
+        // console.log(event.target.value, "-role")
         setProductData({...productData,["cetegory"]:event.target.value})
        }
        useEffect(() =>{

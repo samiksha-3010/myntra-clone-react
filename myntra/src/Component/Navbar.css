@@ -45,13 +45,19 @@
 .search>div{
     /* border: 1px solid black; */
     margin-top: 25px;
+    background-color: #f5f5f6;
+    border-radius: 10px;
 
 }
 .search>div>input{
-    width: 90%;
+    width: 100%;
     border: none;
     outline: none;
     height: 35px;
+   text-align: center;
+    background-color: #f5f5f6;
+
+
 }
 .logo2{
     width: 20%;

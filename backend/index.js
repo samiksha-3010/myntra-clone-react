@@ -68,11 +68,6 @@ app.patch("/get-verify-product", isAdmin, getVerifiedProducts);
 app.patch("/get-un-verify-product", isAdmin, getUnVerifiedProducts); 
 
 
-
-
-
-
-
 mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log("Connected to DB...")
 })

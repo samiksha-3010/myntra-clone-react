@@ -33,7 +33,7 @@ export const Register = async (req, res) => {
 
 export const Login = async (req, res) => {
     try {
-        const { email, password } = req.body.userData;
+        const { email, password } = req.body .userData;
         if (!email || !password) return res.json({ success: false, message: "All fields are mandtory.." })
 
         const user = await UserModals.findOne({ email })

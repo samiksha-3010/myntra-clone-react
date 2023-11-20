@@ -1,5 +1,6 @@
 
 import axios from 'axios';
+import './Register.css';
 import React, { useState } from 'react'
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
@@ -43,8 +44,18 @@ const Register = () => {
 
 
   return (
-    <div>
-         <h2>Register</h2>
+    <div id="screen">
+         <div id="body">
+        <div id="signin">
+        <div>
+            <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2023/2/7/c2be095d-a4fb-4981-bdad-9d69ea189da31675792659902-offer-banner-500-600x240-code-_-MYNTRA200.jpg" />
+          </div>
+          <div>
+            <p>
+              <b>Register </b>
+            </p>
+          </div>
+          <div id="logform">
          <form onSubmit={handleSubmit}>
                 <label>Name</label><br />
                 <input value={userData.name} type='text' name='name' onChange={handleChange} /><br />
@@ -61,7 +72,11 @@ const Register = () => {
                 <label>Confirm Pasword</label><br />
                 <input value={userData.confirmpassword} type='password' name='confirmpassword' onChange={handleChange} /><br />
                 <input type='submit' value='Register' /><br />
+                <p onClick={() => router("/login")}>'Login Here?</p>
             </form>
+            </div>
+            </div>
+    </div>
     </div>
   )
 }
