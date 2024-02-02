@@ -141,6 +141,8 @@ const Navbar = () => {
           <p style={{ color: " #282c3f" }}>HOME & LIVING</p>
           <p>BEAUTY</p>
           <p>STUDIO</p>
+          {state?.user?.role != "Buyer" && <h4 onClick={() => router('/addproduct')}>AddProduct</h4>}
+
         </div>
         <div id="search">
           <div>
@@ -151,6 +153,7 @@ const Navbar = () => {
             />
           </div>
         </div>
+
         <div id="profile">
           <div>
             <i class="fa-solid fa-user fa-lg"></i>
